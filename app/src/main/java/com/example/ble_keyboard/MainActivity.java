@@ -7,6 +7,7 @@ import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattService;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Build;
@@ -38,11 +39,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -97,6 +100,16 @@ public class MainActivity extends AppCompatActivity {
                 startScan();
             }
         });
+
+        // To calibration page
+        FloatingActionButton fab2 = findViewById(R.id.fab2);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Calibration.class));;
+            }
+        });
+
 
         checkPermissions();
 
@@ -153,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onLeScan(BleDevice bleDevice) {
+                public void onLeScan(BleDevice bleDevice) {
                 super.onLeScan(bleDevice);
             }
 

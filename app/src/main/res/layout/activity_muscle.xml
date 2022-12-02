@@ -7,7 +7,7 @@
     tools:context=".Muscle">
 
     <EditText
-        android:id="@+id/editTextTextMultiLine3"
+        android:id="@+id/Bicep"
         android:layout_width="108dp"
         android:layout_height="45dp"
         android:ems="10"
@@ -19,7 +19,7 @@
         tools:layout_editor_absoluteY="613dp" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine4"
+        android:id="@+id/Tricep"
         android:layout_width="108dp"
         android:layout_height="45dp"
         android:ems="10"
@@ -84,7 +84,7 @@
         tools:layout_editor_absoluteY="559dp" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine2"
+        android:id="@+id/Forearm"
         android:layout_width="108dp"
         android:layout_height="45dp"
         android:ems="10"
